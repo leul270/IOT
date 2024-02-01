@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends 'main.html' %} {% block content %}
+    <h1>this is administrator page</h1>
+    <div>
+      <div>
+        {% for create_form in USERFORM %}
+        <div>
+          <a href="">
+            <h5>{{create_form.customer}} --- {{create_form.data}}</h5>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>
